@@ -1,0 +1,16 @@
+<!-- templates/subscribe.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subscribe</title>
+</head>
+<body>
+    <h1>Subscribe to Flight Updates</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Subscribe</button>
+    </form>
+</body>
+</html>

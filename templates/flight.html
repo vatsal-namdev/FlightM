@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Status</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Flight Statuses</h1>
+    <table border="1">
+        <tr>
+            <th>Flight Number</th>
+            <th>Departure</th>
+            <th>Destination</th>
+            <th>Scheduled Time</th>
+            <th>Status</th>
+        </tr>
+        {% for flight in flights %}
+            <tr>
+                <td>{{ flight.flight_number }}</td>
+                <td>{{ flight.departure }}</td>
+                <td>{{ flight.destination }}</td>
+                <td>{{ flight.scheduled_time }}</td>
+                <td>
+                    {% for status in flight_statuses %}
+                        {% if status.flight.id == flight.id %}
+                            {{ status.status }}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

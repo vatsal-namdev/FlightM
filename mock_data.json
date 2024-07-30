@@ -1,0 +1,30 @@
+[
+    {
+        "flight_number": "AA101",
+        "departure": "JFK",
+        "destination": "LAX",
+        "scheduled_time": "2024-07-29T15:30:00Z",
+        "status": "On Time"
+    },
+    {
+        "flight_number": "BA202",
+        "departure": "LHR",
+        "destination": "ORD",
+        "scheduled_time": "2024-07-29T17:45:00Z",
+        "status": "On Time"
+    },
+    {
+        "flight_number": "DL303",
+        "departure": "ATL",
+        "destination": "SEA",
+        "scheduled_time": "2024-07-29T13:00:00Z",
+        "status": "On Time"
+    },
+    {
+        "flight_number": "UA404",
+        "departure": "SFO",
+        "destination": "DCA",
+        "scheduled_time": "2024-07-29T20:00:00Z",
+        "status": "Delayed"
+    }
+]
